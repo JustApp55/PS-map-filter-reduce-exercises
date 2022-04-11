@@ -29,7 +29,7 @@ const transformersMap = () => {
       const forms = transformers.map((transformer) => transformer.form)
       return forms;
 }
-//console.log(transformersMap())
+console.log("Map: ", transformersMap())
 
 
 /*
@@ -74,7 +74,7 @@ const transformersFilter = () => {
     const teams = transformers.filter((transformer) => transformer.team === 'Autobot')
     return teams;
 }
-//console.log(transformersFilter())
+console.log("Filter: ", transformersFilter())
 
 /*
 Reduce Transformers
@@ -112,7 +112,7 @@ const reduceTransformers = () => {
      }, 0)
     return val;
 }
-//console.log(reduceTransformers()) 
+console.log("Reduce: ", reduceTransformers()) 
 
 
 
@@ -135,7 +135,7 @@ const sumPositiveElement = () => {
    }
     return sum;
 }
-//console.log(sumPositiveElement())
+console.log("SumOfPositiveEle: ", sumPositiveElement())
 
 
 
@@ -186,7 +186,8 @@ const nameInitials = () => {
       }
       return initials
 }
-console.log(nameInitials())
+console.log("Initials: ", nameInitials())
+
 /*
 Age difference from the youngest and oldest
 Find the difference in age between the oldest and youngest family members, and return their respective ages and the age difference.
@@ -217,5 +218,17 @@ const ageDifference = () => {
           age: 65,
         }
       ];
+      
+  
+    let agesDiff = input.map((ages)=>{
+      let youngest = Math.min(ages.age)
+      let oldest = Math.max(ages.age)
+      let diff = oldest - youngest
+      let members = [youngest, oldest, diff] 
+      return members
+
+    })
+   return agesDiff
 }
+console.log("Age Difference: ", ageDifference())
 
